@@ -5,8 +5,12 @@ This is intended as a lightweight (no heavy assets)
 mix of all [C++ Tutorials](https://docs.unrealengine.com/latest/INT/Programming/Tutorials/index.html)
 from the official [Programming Guide](https://docs.unrealengine.com/latest/INT/Programming/index.html)
 
+### Progression
+
 Let's start with the [Programming Quick Start](https://docs.unrealengine.com/latest/INT/Programming/QuickStart/index.html)
 using a C++ BasicCode project in Scalable Quality, without Start Content.
+
+Then we add a Timer Event from [Variables, Timers, and Events Tutorial](https://docs.unrealengine.com/latest/INT/Programming/Tutorials/VariablesTimersEvents/index.html)
 
 ### License:
 
