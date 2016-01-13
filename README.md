@@ -14,6 +14,8 @@ using a C++ BasicCode project in Scalable Quality, without Start Content.
 
 3. We add a Pawn from [Player Input and Pawns](https://docs.unrealengine.com/latest/INT/Programming/Tutorials/PlayerInput/index.html)
 
+4. We add a CameraDirector from [Game-Controlled Cameras](https://docs.unrealengine.com/latest/INT/Programming/Tutorials/AutoCamera/index.html)
+
 ### License:
 
 Copyright 2015-2016 Sébastien Rombauts (sebastien.rombauts@gmail.com)
