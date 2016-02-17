@@ -4,7 +4,7 @@
 #include "BatteryPickup.h"
 
 
-//Set default values
+// Set default values
 ABatteryPickup::ABatteryPickup()
 {
 	GetMesh()->SetSimulatePhysics(true);
