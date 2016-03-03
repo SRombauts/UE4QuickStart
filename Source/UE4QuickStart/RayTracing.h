@@ -5,6 +5,7 @@
 #include "GameFramework/Actor.h"
 #include "RayTracing.generated.h"
 
+// Ray Cast / Line Trace
 UCLASS()
 class UE4QUICKSTART_API ARayTracing : public AActor
 {
