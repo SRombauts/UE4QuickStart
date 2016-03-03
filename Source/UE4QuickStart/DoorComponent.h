@@ -36,9 +36,16 @@ private:
 
 	// The Volume trigger that can open the door
 	UPROPERTY(EditAnywhere)
-	AActor* Trigger = nullptr;
+	ATriggerVolume* Trigger = nullptr;
 
-	// Angle of rotation (degrees) to apply to the door when open (0° when closed)
+	// Angle of rotation (degrees) to apply to the door when openned (0° when closed)
 	UPROPERTY(EditAnywhere)
 	float Angle = 80.f;
+
+	// Time to leave the door open
+	UPROPERTY(EditAnywhere)
+	float DelayToClose = 1.f;
+
+	// Time of when the door was opened
+	float TimeOfOpening = 0.f;
 };

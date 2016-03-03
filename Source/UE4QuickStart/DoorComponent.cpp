@@ -20,14 +20,45 @@ void UDoorComponent::BeginPlay()
 	Super::BeginPlay();
 
 	Door = GetOwner();
-	OpenDoor();
+
+	// At this stage, the World should always exists
+	const UWorld* const World = GetWorld();
+	if (World)
+	{
+		const APlayerController* const OurPlayerController = World->GetFirstPlayerController();
+		if (OurPlayerController)
+		{
+			OpenerPawn = OurPlayerController->GetPawn();
+		}
+	}
 }
 
 
 // Called every frame
-void UDoorComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction )
+void UDoorComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
-	Super::TickComponent( DeltaTime, TickType, ThisTickFunction );
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	const UWorld* const World = GetWorld();
+	if (World)
+	{
+		const float CurrentTime = World->GetTimeSeconds();
+		if (Trigger)
+		{
+			if (Trigger->IsOverlappingActor(OpenerPawn))
+			{
+				OpenDoor();
+				TimeOfOpening = CurrentTime;
+			}
+			else
+			{
+				if (CurrentTime > TimeOfOpening + DelayToClose)
+				{
+					CloseDoor();
+				}
+			}
+		}
+	}
 }
 
 
