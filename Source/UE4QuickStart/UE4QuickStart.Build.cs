@@ -1,10 +1,10 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2016 Sébastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2018s Sebastien Rombauts - distributed under the MIT License
 
 using UnrealBuildTool;
 
 public class UE4QuickStart : ModuleRules
 {
-	public UE4QuickStart(TargetInfo Target)
+	public UE4QuickStart(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 

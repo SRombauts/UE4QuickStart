@@ -1,4 +1,4 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2016 Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2018 Sebastien Rombauts - distributed under the MIT License
 
 #include "UE4QuickStart.h"
 #include "Countdown.h"
@@ -8,7 +8,7 @@
 ACountdown::ACountdown()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	CountdownText = CreateDefaultSubobject<UTextRenderComponent>((TEXT("CountdownNumber")));
 	CountdownText->SetHorizontalAlignment(EHTA_Center);
@@ -31,7 +31,7 @@ void ACountdown::BeginPlay()
 	}
 }
 
-// Called every frame
+// (disabled) Called every frame
 void ACountdown::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );

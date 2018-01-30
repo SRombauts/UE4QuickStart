@@ -3,6 +3,7 @@ Build
 DerivedDataCache
 Intermediate
 Saved
+.vs
 *.opensdf
 *.opendb
 *.sdf

@@ -1,4 +1,4 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2016 Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2018 Sebastien Rombauts - distributed under the MIT License
 
 #include "UE4QuickStart.h"
 #include "FloatingActor.h"
@@ -23,8 +23,8 @@ void AFloatingActor::BeginPlay()
 	}
 }
 
-// Called every frame
-void AFloatingActor::Tick( float DeltaTime )
+// Called every frame: uses a sinusoid mathematical function to loop periodically across time
+void AFloatingActor::Tick(float DeltaTime)
 {
 	Super::Tick( DeltaTime );
 
