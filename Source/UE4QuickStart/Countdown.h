@@ -1,8 +1,9 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2018 Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2020 Sebastien Rombauts - distributed under the MIT License
 
 #pragma once
 
 #include "GameFramework/Actor.h"
+#include "Components/TextRenderComponent.h"
 #include "Countdown.generated.h"
 
 /// Uses a Timer instead of the Tick to trigger an event after a few seconds (https://docs.unrealengine.com/latest/INT/Programming/Tutorials/VariablesTimersEvents/1/index.html)

@@ -1,9 +1,11 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2018 Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2020 Sebastien Rombauts - distributed under the MIT License
 
-#include "UE4QuickStart.h"
 #include "SpawnVolume.h"
-#include "Pickup.h"
+
+#include "Components/BoxComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Pickup.h"
+#include "UE4QuickStart.h"
 
 
 // Sets default values
@@ -56,7 +58,7 @@ void ASpawnVolume::SpawnPickup()
 			// Set the spawn parameters
 			FActorSpawnParameters SpawnParams;
 			SpawnParams.Owner = this;
-			SpawnParams.Instigator = Instigator;
+			SpawnParams.Instigator = GetInstigator();
 
 			// Get a random location and a random rotation
 			const FVector SpawnLocation = GetRandomPointInVolume();

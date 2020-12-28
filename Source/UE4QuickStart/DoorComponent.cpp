@@ -1,15 +1,12 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2018 Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2020 Sebastien Rombauts - distributed under the MIT License
 
-#include "UE4QuickStart.h"
 #include "DoorComponent.h"
 
 
 // Sets default values for this component's properties
 UDoorComponent::UDoorComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
-	bWantsBeginPlay = true;
+	// Set this component to be ticked every frame.  You can turn this features off to improve performance if you don't need it.
 	PrimaryComponentTick.bCanEverTick = true;
 }
 

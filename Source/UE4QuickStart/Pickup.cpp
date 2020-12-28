@@ -1,7 +1,8 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2018 Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2020 Sebastien Rombauts - distributed under the MIT License
+
+#include "Pickup.h"
 
 #include "UE4QuickStart.h"
-#include "Pickup.h"
 
 
 // Sets default values

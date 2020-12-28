@@ -1,4 +1,4 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2018s Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2020s Sebastien Rombauts - distributed under the MIT License
 
 using UnrealBuildTool;
 

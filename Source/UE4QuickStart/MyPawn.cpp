@@ -1,8 +1,8 @@
-// UE4 C++ Quick Start Tutorials - copyright 2015-2018 Sebastien Rombauts - distributed under the MIT License
+// UE4 C++ Quick Start Tutorials - copyright 2015-2020 Sebastien Rombauts - distributed under the MIT License
 
-#include "UE4QuickStart.h"
 #include "MyPawn.h"
 
+#include "Camera/CameraComponent.h"
 
 // Sets default values
 AMyPawn::AMyPawn()
@@ -19,13 +19,13 @@ AMyPawn::AMyPawn()
 	// Create a camera
 	UCameraComponent* OurCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("OurCamera"));
 	// Attach our camera to our root component. Offset and rotate the camera.
-	OurCamera->AttachTo(RootComponent);
+	OurCamera->SetupAttachment(RootComponent);
 	OurCamera->SetRelativeLocation(FVector(-250.0f, 0.0f, 250.0f));
 	OurCamera->SetRelativeRotation(FRotator(-45.0f, 0.0f, 0.0f));
 
 	// Create a visible object and attach it to the root component.s
 	OurVisibleComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("OurVisibleComponent"));
-	OurVisibleComponent->AttachTo(RootComponent);
+	OurVisibleComponent->SetupAttachment(RootComponent);
 
 	CurrentVelocity = FVector(0.f);
 }
@@ -74,9 +74,9 @@ void AMyPawn::Tick( float DeltaTime )
 }
 
 // Called to bind functionality to input
-void AMyPawn::SetupPlayerInputComponent(class UInputComponent* InputComponent)
+void AMyPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
-	Super::SetupPlayerInputComponent(InputComponent);
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	// Respond when our "Grow" key is pressed or released.
 	InputComponent->BindAction("Grow", IE_Pressed, this, &AMyPawn::StartGrowing);

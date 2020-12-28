@@ -37,7 +37,7 @@ using a C++ BasicCode project in Scalable Quality, without Starter Content.
 
 ### License:
 
-Copyright 2015-2018 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+Copyright 2015-2020 Sebastien Rombauts (sebastien.rombauts@gmail.com)
 
 Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
 or copy at http://opensource.org/licenses/MIT)
