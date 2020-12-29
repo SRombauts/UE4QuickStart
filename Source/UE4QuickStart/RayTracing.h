@@ -28,5 +28,4 @@ private:
 
 	// Cast a ray accross the level
 	void TraceLine();
-	float TimeSinceLastTrace = 0.0f;
 };

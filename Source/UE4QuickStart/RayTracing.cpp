@@ -12,28 +12,22 @@ ARayTracing::ARayTracing()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	// Do not trace each tick (an event or a timer would be more efficient in real usage)
+	PrimaryActorTick.TickInterval = 0.25f;
 }
 
 // Called when the game starts or when spawned
 void ARayTracing::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
-// Called every frame
+// Called on certain frame with TickInterval = 0.25f
 void ARayTracing::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Do not trace each tick (an event or a timer would be more efficient in real usage)
-	TimeSinceLastTrace += DeltaTime;
-	if (TimeSinceLastTrace >= 0.25f)
-	{
-		TraceLine();
-		TimeSinceLastTrace = 0.0f;
-	}
+	TraceLine();
 }
 
 // Cast a ray accross the level
