@@ -2,8 +2,8 @@ Unreal Engine 4 C++ Programming Quick Start Tutorials
 -----------------------------------------------------
 
 This is intended as a lightweight (no heavy assets)
-mix of all [C++ Tutorials](https://docs.unrealengine.com/latest/INT/Programming/Tutorials/index.html)
-from the official [Programming Guide](https://docs.unrealengine.com/latest/INT/Programming/index.html)
+mix of all [C++ Tutorials](https://docs.unrealengine.com/5.0/en-US/unreal-engine-cpp-programming-tutortials/)
+from the official [Programming with C++ Guide](https://docs.unrealengine.com/5.0/en-US/programming-with-cplusplus-in-unreal-engine/)
 and various other sources
 
 ### Progression
